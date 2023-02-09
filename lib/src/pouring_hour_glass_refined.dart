@@ -1,4 +1,5 @@
 import 'dart:math' as math;
+import 'dart:ui';
 
 import 'package:flutter/widgets.dart';
 
@@ -99,7 +100,7 @@ class _HourGlassPaint extends CustomPainter {
       ..lineTo(centerX + hourglassWidth, top)
       ..arcToPoint(
         Offset(centerX + hourglassWidth, top + 7),
-        radius: const Radius.circular(4),
+        radius: Radius.circular(4),
         clockwise: true,
       )
       ..lineTo(centerX + hourglassWidth - 2, top + 8)
@@ -108,13 +109,13 @@ class _HourGlassPaint extends CustomPainter {
           centerX + hourglassWidth - 2, (bottom + halfHeight) / 2, centerX + hourglassWidth - 2, bottom - 7)
       ..arcToPoint(
         Offset(centerX + hourglassWidth, bottom),
-        radius: const Radius.circular(4),
+        radius: Radius.circular(4),
         clockwise: true,
       )
       ..lineTo(centerX - hourglassWidth, bottom)
       ..arcToPoint(
         Offset(centerX - hourglassWidth, bottom - 7),
-        radius: const Radius.circular(4),
+        radius: Radius.circular(4),
         clockwise: true,
       )
       ..lineTo(centerX - hourglassWidth + 2, bottom - 7)
@@ -123,7 +124,7 @@ class _HourGlassPaint extends CustomPainter {
           centerX - hourglassWidth + 2, (top + halfHeight) / 2 + 2, centerX - hourglassWidth + 2, top + 7)
       ..arcToPoint(
         Offset(centerX - hourglassWidth, top),
-        radius: const Radius.circular(4),
+        radius: Radius.circular(4),
         clockwise: true,
       )
       ..close();
